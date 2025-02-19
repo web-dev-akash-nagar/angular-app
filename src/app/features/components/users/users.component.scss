@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+  }
+  
+  .content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .users-section, .profile-section {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+  }
+  
+  .profile-section div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-section strong {
+    min-width: 150px;
+    text-align: left;
+  }
+  
+  .profile-section span {
+    flex-grow: 1;
+  }
+  
+  .users-section {
+    border-right: 1px solid #ccc;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+  }
+  
+
+.content {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  gap: 15px; /* Space between sections */
+}
+
+/* Style for the Users section */
+.users-section {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Style for the Profile section */
+.profile-section {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row; /* Side-by-side layout */
+  }
+  
+  .users-section {
+    width: 30%; /* Users section takes 30% */
+    background-color: #ffffff;
+  }
+
+  .profile-section {
+    width: 70%; /* Profile section takes 70% */
+  }
+}

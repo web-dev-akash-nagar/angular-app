@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="content">
+      <div class="users-section">
+        <h4>Users</h4>
+        <mat-form-field appearance="outline" class="dropdown full-width">
+          <mat-label>Select User</mat-label>
+          <mat-select [(value)]="selectedUser" (selectionChange)="selectUser($event.value)">
+            <mat-option *ngFor="let user of users" [value]="user">
+              {{ user.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="profile-section">
+        <h4>Profile</h4>
+        <div><strong>Full name :</strong>   <span>{{ selectedUser?.name }}</span></div>
+        <div><strong>Email address :</strong> <span>{{ selectedUser?.email }}</span></div>        
+        <div><strong>Username :</strong>   <span>{{ selectedUser?.username }}</span></div>
+        <div><strong>Phone :</strong> <span>{{ selectedUser?.phone }}</span></div>    
+        <div><strong>Company :</strong>   <span>{{ selectedUser?.company?.name }}</span></div>
+        <div><strong>Website :</strong> <span>{{ selectedUser?.website }}</span></div>            
+      </div>
+    </div>
+    </div>
+  
